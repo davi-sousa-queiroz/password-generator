@@ -1,10 +1,10 @@
 from generator import generate
-from generator import password
 from generator import intro
+from generator import main_menu
 
 while True:
     intro()
-    generate()
-    for num in password:
-        print(num, end="")
-    break
+    main_menu()
+    selection = input("\n>>  ")
+    if selection == "1":
+        generate()
