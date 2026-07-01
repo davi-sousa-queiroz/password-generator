@@ -1,16 +1,20 @@
 import random
 import time
 
+passwords = []
+
 password = []
 
 
 def generate():
     time.sleep(1)
     password.clear()
+    passwords.clear()
     print()
     for num in range(1, 11):
         single = random.randint(0, 9)
         password.append(single)
+        passwords.append(single)
     for num in password:
         print(num, end="")
     print()
@@ -23,6 +27,17 @@ def intro():
 
 
 def main_menu():
-    print("1) Generate Password")
-    print("2) View Passwords")
-    print("3) Create Password")
+    print("\n1) Generate New Password")
+    print("2) View Password")
+    print("3) Create New Password")
+
+
+def view_passwords():
+    time.sleep(1)
+    print()
+    if passwords:
+        for password in passwords:
+            print(password, end="")
+        print()
+    else:
+        print("\nYou Have No Set Password")
