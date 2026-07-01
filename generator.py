@@ -41,3 +41,19 @@ def view_passwords():
         print()
     else:
         print("\nYou Have No Set Password")
+
+
+def create_password():
+    time.sleep(1)
+
+    passwords.clear()
+
+    print("\nCreate Your Passsword!")
+
+    created_password = input("\n>> ")
+
+    passwords.append(created_password)
+
+    print("\nPassword Set!")
+
+    print()
